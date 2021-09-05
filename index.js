@@ -29,7 +29,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 const { MongoClient } = require('mongodb');
 const { error } = require('console');
-const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.nudkk.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`;
+const uri = `mongodb+srv://FashionUser:FashionUser005@cluster0.nudkk.mongodb.net/FashionWorld?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 client.connect(err => {
     const productsCollection = client.db("FashionWorld").collection("allProducts");
